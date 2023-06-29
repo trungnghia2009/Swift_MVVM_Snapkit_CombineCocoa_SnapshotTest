@@ -8,7 +8,7 @@
 import UIKit
 
 struct ThemeFont {
-    
+
     static func regular(ofSize size: CGFloat) -> UIFont {
         return getFont(name: "AvenirNext-Regular", size: size)
     }
