@@ -43,11 +43,19 @@ class ResultView: UIView {
         return stackView
     }()
 
+    private let totalBillView: AmountView = {
+        AmountView(title: "Total bill", textAlignment: .left)
+    }()
+
+    private let totalTipView: AmountView = {
+        AmountView(title: "Total tip", textAlignment: .right)
+    }()
+
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(title: "Total bill", textAlignment: .left),
+            totalBillView,
             UIView(),
-            AmountView(title: "Total tip", textAlignment: .right)
+            totalTipView
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -61,6 +69,17 @@ class ResultView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func configure(result: Result) {
+        let text = NSMutableAttributedString(
+            string: "$\(result.amountPerPerson)",
+            attributes: [.font: ThemeFont.bold(ofSize: 48)])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
+        amountPerPersonLabel.attributedText = text
+
+        totalBillView.configure(text: "\(result.totalBill)")
+        totalTipView.configure(text: "\(result.totalTip)")
     }
 
     private func layout() {

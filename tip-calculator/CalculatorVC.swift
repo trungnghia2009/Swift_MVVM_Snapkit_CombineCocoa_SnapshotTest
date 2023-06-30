@@ -52,8 +52,8 @@ class CalculatorVC: UIViewController {
 
         let output = vm.transform(input: input)
         output.updateViewPublisher
-            .sink { result in
-                print("Result: \(result)")
+            .sink { [weak self] result in
+                self?.resultView.configure(result: result)
             }.store(in: &subscriptions)
     }
 
