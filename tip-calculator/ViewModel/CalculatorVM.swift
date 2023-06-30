@@ -16,10 +16,12 @@ class CalculatorVM {
         let billdPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void, Never>
     }
 
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
 
     func transform(input: Input) -> Output {
@@ -50,7 +52,11 @@ class CalculatorVM {
             }
             .eraseToAnyPublisher()
 
-        return Output(updateViewPublisher: updateViewPublisher)
+        let resetCalculatorPublisher = input.logoViewTapPublisher
+
+        return Output(
+            updateViewPublisher: updateViewPublisher,
+            resetCalculatorPublisher: resetCalculatorPublisher)
     }
 
     private func getTipAmout(bill: Double, tip: Tip) -> Double {
