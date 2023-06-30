@@ -173,10 +173,10 @@
 			children = (
 				2CE26B432A4DCC4F00937437 /* LogoView.swift */,
 				2CE26B452A4DCD3500937437 /* ResultView.swift */,
-				2CE26B5A2A4E6B3700937437 /* AmountView.swift */,
 				2CE26B472A4DCD5200937437 /* BillInputView.swift */,
 				2CE26B492A4DCD6500937437 /* TipInputView.swift */,
 				2CE26B4B2A4DCD7900937437 /* SplitInputView.swift */,
+				2CE26B5C2A4E77DC00937437 /* Customs */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +205,14 @@
 				2CE26B562A4DDD1200937437 /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		2CE26B5C2A4E77DC00937437 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				2CE26B5A2A4E6B3700937437 /* AmountView.swift */,
+			);
+			path = Customs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
