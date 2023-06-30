@@ -51,6 +51,10 @@ class CalculatorVC: UIViewController {
             splitPublisher: splitInputView.valuePublisher)
 
         let output = vm.transform(input: input)
+        output.updateViewPublisher
+            .sink { result in
+                print("Result: \(result)")
+            }.store(in: &subscriptions)
     }
 
     private func layout() {

@@ -63,7 +63,7 @@ class SplitInputView: UIView {
 
     private let splitSubject = CurrentValueSubject<Int, Never>(1)
     var valuePublisher: AnyPublisher<Int, Never> {
-        splitSubject.eraseToAnyPublisher()
+        splitSubject.removeDuplicates().eraseToAnyPublisher()
     }
 
     init() {
