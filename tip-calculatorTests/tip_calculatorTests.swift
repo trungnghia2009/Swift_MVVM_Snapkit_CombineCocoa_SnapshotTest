@@ -15,10 +15,12 @@ final class tip_calculatorTests: XCTestCase {
     private var subcriptions: Set<AnyCancellable>!
 
     private let logoViewTapSubject = PassthroughSubject<Void, Never>()
+    private var audioPlayerService: MockAudioPlayerService!
 
     override func setUp() {
         super.setUp()
-        sut = .init()
+        audioPlayerService = .init()
+        sut = .init(audioPlayerService: audioPlayerService)
         subcriptions = .init()
     }
 
@@ -141,6 +143,23 @@ final class tip_calculatorTests: XCTestCase {
                 XCTAssertEqual(result.totalTip, 40)
             }.store(in: &subcriptions)
     }
+
+    func test_soundPlayed_and_calculatorResetOnLogoViewTap() {
+        // given
+        let input = buildInput(bill: 100, tip: .tenPercent, split: 2)
+        let output = sut.transform(input: input)
+        let expectation1 = XCTestExpectation(description: "Reset calculator called")
+        let expectation2 = audioPlayerService.expectation
+
+        // then
+        output.resetCalculatorPublisher.sink { _ in
+            expectation1.fulfill()
+        }.store(in: &subcriptions)
+
+        // when
+        logoViewTapSubject.send()
+        wait(for: [expectation1, expectation2], timeout: 1.0)
+    }
     
 
     private func buildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.Input {
@@ -149,5 +168,13 @@ final class tip_calculatorTests: XCTestCase {
             tipPublisher: Just(tip).eraseToAnyPublisher(),
             splitPublisher: Just(split).eraseToAnyPublisher(),
             logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher())
+    }
+}
+
+class MockAudioPlayerService: AudioPlayerService {
+    var expectation = XCTestExpectation(description: "Play sound is called")
+
+    func playSound() {
+        expectation.fulfill()
     }
 }

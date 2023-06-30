@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:tip-calculator.xctestplan"
+            reference = "container:../tip-calculator.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

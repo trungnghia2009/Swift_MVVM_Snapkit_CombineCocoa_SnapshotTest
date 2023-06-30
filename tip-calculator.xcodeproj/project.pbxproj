@@ -61,7 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C93D3932A4F1E1300B25562 /* tip-calculator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "tip-calculator.xctestplan"; sourceTree = "<group>"; };
+		2C062CA92A4F249B002020BB /* tip-calculator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "tip-calculator.xctestplan"; path = "../tip-calculator.xctestplan"; sourceTree = "<group>"; };
 		2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		2CA76BE72A4F0D1200CD7937 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
@@ -146,6 +146,7 @@
 		2CB5549E2A4DC4F200CE2ACA = {
 			isa = PBXGroup;
 			children = (
+				2C062CA92A4F249B002020BB /* tip-calculator.xctestplan */,
 				2CB554A92A4DC4F200CE2ACA /* tip-calculator */,
 				2CB554C02A4DC4F300CE2ACA /* tip-calculatorTests */,
 				2CB554CA2A4DC4F300CE2ACA /* tip-calculatorUITests */,
@@ -188,7 +189,6 @@
 		2CB554C02A4DC4F300CE2ACA /* tip-calculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C93D3932A4F1E1300B25562 /* tip-calculator.xctestplan */,
 				2CB554C12A4DC4F300CE2ACA /* tip_calculatorTests.swift */,
 			);
 			path = "tip-calculatorTests";
