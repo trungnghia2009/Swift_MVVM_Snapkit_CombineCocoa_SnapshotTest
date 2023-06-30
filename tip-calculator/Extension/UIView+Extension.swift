@@ -20,4 +20,13 @@ extension UIView {
         backgroundColor = nil
         layer.backgroundColor = backgroundCGColor
     }
+
+    func addCornerRadius(radius: CGFloat) {
+        layer.masksToBounds = false
+        layer.cornerRadius = radius
+    }
+
+    func addSubviews(_ views: UIView...) {
+        views.forEach(addSubview(_:))
+    }
 }
