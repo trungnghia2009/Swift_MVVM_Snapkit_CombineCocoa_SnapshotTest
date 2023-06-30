@@ -31,22 +31,6 @@ class CalculatorVM {
     }
 
     func transform(input: Input) -> Output {
-
-        input.billdPublisher
-            .sink { bill in
-                print("Bill: \(bill)")
-            }.store(in: &subscriptions)
-
-        input.tipPublisher
-            .sink { tip in
-                print("Tip: \(tip)")
-            }.store(in: &subscriptions)
-
-        input.splitPublisher
-            .sink { split in
-                print("Split: \(split)")
-            }.store(in: &subscriptions)
-
         let updateViewPublisher = Publishers
             .CombineLatest3(input.billdPublisher, input.tipPublisher, input.splitPublisher)
             .flatMap { [unowned self] (bill, tip, split) in
