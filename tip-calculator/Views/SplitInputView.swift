@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class SplitInputView: UIView {
 
@@ -17,17 +19,29 @@ class SplitInputView: UIView {
 
     private lazy var decrementButton: UIButton = {
         let button = buildButton(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        button.tapPublisher
+            .flatMap { [unowned self] _ in
+                Just(splitSubject.value == 1 ? 1 : splitSubject.value - 1)
+            }
+            .assign(to: \.value, on: splitSubject)
+            .store(in: &subscriptions)
         return button
     }()
 
     private lazy var incrementButton: UIButton = {
         let button = buildButton(text: "+", corners: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner])
+        button.tapPublisher
+            .flatMap { [unowned self] _ in
+                Just(splitSubject.value + 1)
+            }
+            .assign(to: \.value, on: splitSubject)
+            .store(in: &subscriptions)
         return button
     }()
 
     private lazy var quantityLabel: UILabel = {
         let label = LabelFactory.build(
-            text: "1",
+            text: String(splitSubject.value),
             font: ThemeFont.bold(ofSize: 20),
             backgroundColor: .white)
         return label
@@ -45,9 +59,17 @@ class SplitInputView: UIView {
         return stack
     }()
 
+    private var subscriptions = Set<AnyCancellable>()
+
+    private let splitSubject = CurrentValueSubject<Int, Never>(1)
+    var valuePublisher: AnyPublisher<Int, Never> {
+        splitSubject.eraseToAnyPublisher()
+    }
+
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
 
     required init?(coder: NSCoder) {
@@ -73,6 +95,13 @@ class SplitInputView: UIView {
             make.trailing.equalTo(stackView.snp.leading).offset(-24)
             make.width.equalTo(68)
         }
+    }
+
+    private func observe() {
+        splitSubject.sink { [unowned self] quantity in
+            quantityLabel.text = quantity.stringValue
+        }.store(in: &subscriptions)
+
     }
 
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
