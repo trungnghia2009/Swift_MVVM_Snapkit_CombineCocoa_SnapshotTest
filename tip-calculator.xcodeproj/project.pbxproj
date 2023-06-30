@@ -35,6 +35,7 @@
 		2CE26B612A4E80B300937437 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B602A4E80B300937437 /* Tip.swift */; };
 		2CE26B642A4E911F00937437 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B632A4E911F00937437 /* CalculatorVM.swift */; };
 		2CE26B662A4EB5D300937437 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B652A4EB5D300937437 /* Result.swift */; };
+		2CE26B682A4EBB7000937437 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B672A4EBB7000937437 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		2CE26B602A4E80B300937437 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		2CE26B632A4E911F00937437 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
 		2CE26B652A4EB5D300937437 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2CE26B672A4EBB7000937437 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			children = (
 				2CE26B532A4DD67600937437 /* UIColor+Extension.swift */,
 				2CE26B582A4E5A2F00937437 /* UIView+Extension.swift */,
+				2CE26B672A4EBB7000937437 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				2CE26B542A4DD67600937437 /* UIColor+Extension.swift in Sources */,
 				2CE26B482A4DCD5200937437 /* BillInputView.swift in Sources */,
 				2CE26B462A4DCD3500937437 /* ResultView.swift in Sources */,
+				2CE26B682A4EBB7000937437 /* String+Extension.swift in Sources */,
 				2CB554AB2A4DC4F200CE2ACA /* AppDelegate.swift in Sources */,
 				2CE26B512A4DD63100937437 /* ThemeFont.swift in Sources */,
 				2CE26B5E2A4E79E200937437 /* HeaderView.swift in Sources */,

@@ -10,6 +10,8 @@ import Combine
 
 class CalculatorVM {
 
+    private var subscriptions = Set<AnyCancellable>()
+
     struct Input {
         let billdPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
@@ -21,11 +23,11 @@ class CalculatorVM {
     }
 
     func transform(input: Input) -> Output {
+
         let result = Result(
             amountPerPerson: 500,
             totalBill: 1000,
             totalTip: 50)
-
 
         return Output(updateViewPublisher: Just(result).eraseToAnyPublisher())
     }
