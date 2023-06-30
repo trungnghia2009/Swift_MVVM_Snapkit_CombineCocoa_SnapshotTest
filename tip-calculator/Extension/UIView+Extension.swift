@@ -29,4 +29,9 @@ extension UIView {
     func addSubviews(_ views: UIView...) {
         views.forEach(addSubview(_:))
     }
+
+    func addRoundedCorners(corners: CACornerMask, radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.maskedCorners = [corners]
+    }
 }
