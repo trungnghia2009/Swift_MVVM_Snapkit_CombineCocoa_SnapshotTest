@@ -61,9 +61,9 @@ class AmountView: UIView {
         }
     }
 
-    func configure(text: String) {
+    func configure(amount: Double) {
         let text = NSMutableAttributedString(
-            string: "$\(text)",
+            string: amount.currencyFormatted,
             attributes: [.font: ThemeFont.bold(ofSize: 24)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
         amountLabel.attributedText = text

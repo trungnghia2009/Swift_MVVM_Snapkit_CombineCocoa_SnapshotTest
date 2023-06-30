@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CA76BE32A4ED3E300CD7937 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */; };
+		2CA76BE52A4F00C400CD7937 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */; };
 		2CB554AB2A4DC4F200CE2ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB554AA2A4DC4F200CE2ACA /* AppDelegate.swift */; };
 		2CB554AD2A4DC4F200CE2ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB554AC2A4DC4F200CE2ACA /* SceneDelegate.swift */; };
 		2CB554AF2A4DC4F200CE2ACA /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB554AE2A4DC4F200CE2ACA /* CalculatorVC.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		2CB554A72A4DC4F200CE2ACA /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB554AA2A4DC4F200CE2ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB554AC2A4DC4F200CE2ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -214,6 +216,7 @@
 				2CE26B672A4EBB7000937437 /* String+Extension.swift */,
 				2CE26B692A4EC52A00937437 /* UIResponder+Extension.swift */,
 				2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */,
+				2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				2CE26B682A4EBB7000937437 /* String+Extension.swift in Sources */,
 				2CB554AB2A4DC4F200CE2ACA /* AppDelegate.swift in Sources */,
 				2CE26B512A4DD63100937437 /* ThemeFont.swift in Sources */,
+				2CA76BE52A4F00C400CD7937 /* Double+Extension.swift in Sources */,
 				2CE26B5E2A4E79E200937437 /* HeaderView.swift in Sources */,
 				2CB554AD2A4DC4F200CE2ACA /* SceneDelegate.swift in Sources */,
 				2CE26B572A4DDD1200937437 /* LabelFactory.swift in Sources */,
