@@ -24,6 +24,12 @@ class CalculatorVM {
         let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
 
+    private let audioPlayerService: AudioPlayerService
+
+    init(audioPlayerService: AudioPlayerService = DefaultAudioPlayer()) {
+        self.audioPlayerService = audioPlayerService
+    }
+
     func transform(input: Input) -> Output {
 
         input.billdPublisher
@@ -53,6 +59,11 @@ class CalculatorVM {
             .eraseToAnyPublisher()
 
         let resetCalculatorPublisher = input.logoViewTapPublisher
+            .handleEvents(receiveOutput: { [unowned self] in
+                audioPlayerService.playSound()
+            })
+            .flatMap { Just($0) }
+            .eraseToAnyPublisher()
 
         return Output(
             updateViewPublisher: updateViewPublisher,
