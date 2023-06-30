@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C062CAB2A4F2ED7002020BB /* tip_calculatorSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C062CAA2A4F2ED7002020BB /* tip_calculatorSnapshotTests.swift */; };
 		2CA76BE32A4ED3E300CD7937 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */; };
 		2CA76BE52A4F00C400CD7937 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */; };
 		2CA76BE82A4F0D1200CD7937 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA76BE72A4F0D1200CD7937 /* click.m4a */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		2C062CA92A4F249B002020BB /* tip-calculator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "tip-calculator.xctestplan"; path = "../tip-calculator.xctestplan"; sourceTree = "<group>"; };
+		2C062CAA2A4F2ED7002020BB /* tip_calculatorSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorSnapshotTests.swift; sourceTree = "<group>"; };
 		2CA76BE22A4ED3E300CD7937 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		2CA76BE42A4F00C400CD7937 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		2CA76BE72A4F0D1200CD7937 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB554C12A4DC4F300CE2ACA /* tip_calculatorTests.swift */,
+				2C062CAA2A4F2ED7002020BB /* tip_calculatorSnapshotTests.swift */,
 			);
 			path = "tip-calculatorTests";
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB554C22A4DC4F300CE2ACA /* tip_calculatorTests.swift in Sources */,
+				2C062CAB2A4F2ED7002020BB /* tip_calculatorSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
