@@ -30,6 +30,7 @@
 		2CE26B542A4DD67600937437 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B532A4DD67600937437 /* UIColor+Extension.swift */; };
 		2CE26B572A4DDD1200937437 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B562A4DDD1200937437 /* LabelFactory.swift */; };
 		2CE26B592A4E5A2F00937437 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B582A4E5A2F00937437 /* UIView+Extension.swift */; };
+		2CE26B5B2A4E6B3700937437 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B5A2A4E6B3700937437 /* AmountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2CE26B532A4DD67600937437 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2CE26B562A4DDD1200937437 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		2CE26B582A4E5A2F00937437 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		2CE26B5A2A4E6B3700937437 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				2CE26B432A4DCC4F00937437 /* LogoView.swift */,
 				2CE26B452A4DCD3500937437 /* ResultView.swift */,
+				2CE26B5A2A4E6B3700937437 /* AmountView.swift */,
 				2CE26B472A4DCD5200937437 /* BillInputView.swift */,
 				2CE26B492A4DCD6500937437 /* TipInputView.swift */,
 				2CE26B4B2A4DCD7900937437 /* SplitInputView.swift */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE26B5B2A4E6B3700937437 /* AmountView.swift in Sources */,
 				2CB554AF2A4DC4F200CE2ACA /* CalculatorVC.swift in Sources */,
 				2CE26B592A4E5A2F00937437 /* UIView+Extension.swift in Sources */,
 				2CE26B442A4DCC4F00937437 /* LogoView.swift in Sources */,
