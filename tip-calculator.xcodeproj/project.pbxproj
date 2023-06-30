@@ -31,6 +31,8 @@
 		2CE26B572A4DDD1200937437 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B562A4DDD1200937437 /* LabelFactory.swift */; };
 		2CE26B592A4E5A2F00937437 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B582A4E5A2F00937437 /* UIView+Extension.swift */; };
 		2CE26B5B2A4E6B3700937437 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B5A2A4E6B3700937437 /* AmountView.swift */; };
+		2CE26B5E2A4E79E200937437 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B5D2A4E79E200937437 /* HeaderView.swift */; };
+		2CE26B612A4E80B300937437 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE26B602A4E80B300937437 /* Tip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		2CE26B562A4DDD1200937437 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		2CE26B582A4E5A2F00937437 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2CE26B5A2A4E6B3700937437 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		2CE26B5D2A4E79E200937437 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2CE26B602A4E80B300937437 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		2CB554A92A4DC4F200CE2ACA /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				2CE26B5F2A4E80A400937437 /* Model */,
 				2CE26B552A4DDCEE00937437 /* Factory */,
 				2CE26B522A4DD66500937437 /* Extension */,
 				2CE26B4D2A4DD60F00937437 /* Config */,
@@ -211,8 +216,17 @@
 			isa = PBXGroup;
 			children = (
 				2CE26B5A2A4E6B3700937437 /* AmountView.swift */,
+				2CE26B5D2A4E79E200937437 /* HeaderView.swift */,
 			);
 			path = Customs;
+			sourceTree = "<group>";
+		};
+		2CE26B5F2A4E80A400937437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE26B602A4E80B300937437 /* Tip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE26B5B2A4E6B3700937437 /* AmountView.swift in Sources */,
+				2CE26B612A4E80B300937437 /* Tip.swift in Sources */,
 				2CB554AF2A4DC4F200CE2ACA /* CalculatorVC.swift in Sources */,
 				2CE26B592A4E5A2F00937437 /* UIView+Extension.swift in Sources */,
 				2CE26B442A4DCC4F00937437 /* LogoView.swift in Sources */,
@@ -371,6 +386,7 @@
 				2CE26B462A4DCD3500937437 /* ResultView.swift in Sources */,
 				2CB554AB2A4DC4F200CE2ACA /* AppDelegate.swift in Sources */,
 				2CE26B512A4DD63100937437 /* ThemeFont.swift in Sources */,
+				2CE26B5E2A4E79E200937437 /* HeaderView.swift in Sources */,
 				2CB554AD2A4DC4F200CE2ACA /* SceneDelegate.swift in Sources */,
 				2CE26B572A4DDD1200937437 /* LabelFactory.swift in Sources */,
 				2CE26B4C2A4DCD7900937437 /* SplitInputView.swift in Sources */,
