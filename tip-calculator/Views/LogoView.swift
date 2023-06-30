@@ -75,7 +75,7 @@ class LogoView: UIView {
         }
 
         imageView.snp.makeConstraints { make in
-            make.width.equalTo(imageView.snp.height)
+            make.width.equalTo(imageView.snp.height) // Make width equal to height in stack view
         }
     }
 
